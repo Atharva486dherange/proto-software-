@@ -1,5 +1,5 @@
 /* =============================================================
-   Trailmark — Full Travel Agency Platform
+   Wayfare — Tourism Management System
    Vanilla JS · in-memory prototype
    ============================================================= */
 
@@ -106,7 +106,7 @@ let REVIEWS = [
   { id:"rv1", author:"Dhananjay Borse",  pkg:"Goa Beach Escape",        rating:5, text:"Absolutely loved it! Every detail was sorted — the hotel, transport, activities. 10/10 would book again.", date:"2026-10-18", status:"Approved" },
   { id:"rv2", author:"Siddhesh Kawad",   pkg:"Ladakh High Passes",      rating:5, text:"Breathtaking landscapes and a perfectly paced itinerary. Atharva was an incredible guide.", date:"2026-11-10", status:"Pending" },
   { id:"rv3", author:"Parth Kokate",     pkg:"Jaipur Heritage Trail",   rating:4, text:"Loved the heritage hotels and the rooftop dinner. Could have had one more day at Amber Fort.", date:"2026-09-25", status:"Approved" },
-  { id:"rv4", author:"Riya Shah",        pkg:"Kerala Backwaters Bliss", rating:5, text:"The houseboat experience was magical. Completely stress-free booking process through Trailmark.", date:"2026-08-14", status:"Pending" },
+  { id:"rv4", author:"Riya Shah",        pkg:"Kerala Backwaters Bliss", rating:5, text:"The houseboat experience was magical. Completely stress-free booking process through Wayfare.", date:"2026-08-14", status:"Pending" },
   { id:"rv5", author:"Meera Joshi",      pkg:"Bali Island Getaway",     rating:4, text:"Fantastic resort selection. The Ubud rice terraces at sunrise were worth every rupee.", date:"2026-07-30", status:"Approved" },
   { id:"rv6", author:"Karan Singh",      pkg:"Manali Mountain Retreat", rating:5, text:"Rafting on the Beas was exhilarating. Agent sorted everything from airport to checkout.", date:"2026-06-20", status:"Pending" }
 ];
@@ -1044,7 +1044,7 @@ function wireActions(root) {
         hr{border:none;border-top:1px dashed #ccc;margin:16px 0}
         @media print{button{display:none}}</style></head>
         <body>
-        <p class="ref">TRAILMARK · E-TICKET</p>
+        <p class="ref">Wayfare · E-TICKET</p>
         <h2>${bk.name}</h2>
         <p>📍 ${bk.destination} &nbsp;·&nbsp; ${bk.detail||""}</p>
         <hr>
@@ -1054,7 +1054,7 @@ function wireActions(root) {
         <p><strong>Status:</strong> ${bk.status}</p>
         <p class="total">Total paid: ₹${(+bk.totalPrice).toLocaleString("en-IN")}</p>
         <hr>
-        <p style="font-size:11px;color:#999">Prototype — no real booking was made. Trailmark Travel Pvt. Ltd.</p>
+        <p style="font-size:11px;color:#999">Prototype — no real booking was made. Wayfare (Tourism Management System). Ltd.</p>
         <br><button onclick="window.print()">🖨 Print</button>
         </body></html>`);
       w.document.close();
@@ -1646,7 +1646,7 @@ function askAi(query) {
   if (lowerQ.includes("hello") || lowerQ.includes("hi") || lowerQ.includes("hey")) {
     responseHtml = `<div class="ai-bubble">Hello! I'm here to help you find your dream vacation. What kind of destination are you looking for?</div>`;
   } else if (lowerQ.includes("weather") || lowerQ.includes("visa")) {
-    responseHtml = `<div class="ai-bubble">I specialize in finding you the best travel packages on Trailmark! I recommend checking your destination's official tourism website for the latest weather and visa information. Can I help you search for a trip instead?</div>`;
+    responseHtml = `<div class="ai-bubble">I specialize in finding you the best travel packages on Wayfare! I recommend checking your destination's official tourism website for the latest weather and visa information. Can I help you search for a trip instead?</div>`;
   } else {
     // Generate package cards
     const cardsHtml = recommended.map(p => `
