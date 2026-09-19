@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16241F">
+  <title>Trailmark — Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- =====================================================================
+     SCREEN 1 — PUBLIC LANDING PAGE  (visible to everyone, no login needed)
+===================================================================== -->
+<div id="screen-landing" class="screen">
+
+  <!-- Public topbar -->
+  <header class="pub-topbar">
+    <div class="pub-topbar-inner">
+      <div class="brand-wrap">
+        <span class="stamp-mark">T</span>
+        <span class="brand-name">Trailmark</span>
+      </div>
+      <nav class="pub-nav">
+        <a href="#" class="pub-nav-link" data-lnav="why">Why Trailmark</a>
+        <a href="#" class="pub-nav-link" data-lnav="destinations">Destinations</a>
+        <a href="#" class="pub-nav-link" data-lnav="agents">Travel Agents</a>
+        <a href="#" class="pub-nav-link" data-lnav="about">About</a>
+      </nav>
+      <div class="pub-topbar-cta">
+        <button class="theme-toggle" id="theme-toggle-pub" type="button" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+        <button class="btn btn-ghost btn-small" id="lp-signin-btn" type="button">Sign in</button>
+        <button class="btn btn-amber btn-small" id="lp-getstarted-btn" type="button">Get started →</button>
+      </div>
+      <button class="hamburger" id="lp-hamburger" type="button" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="pub-mobile-nav" id="pub-mobile-nav" hidden>
+      <a href="#" class="pub-mob-link" data-lnav="why">Why Trailmark</a>
+      <a href="#" class="pub-mob-link" data-lnav="destinations">Destinations</a>
+      <a href="#" class="pub-mob-link" data-lnav="agents">Travel Agents</a>
+      <a href="#" class="pub-mob-link" data-lnav="about">About</a>
+      <a href="#" class="pub-mob-link" id="mob-signin">Sign in</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="lp-hero">
+    <div class="lp-hero-content">
+      <p class="lp-eyebrow">✦ India's smartest travel planner</p>
+      <h1>Your dream trip,<br><em>planned perfectly.</em></h1>
+      <p class="lp-hero-sub">Discover destinations, book hotels &amp; transport, design itineraries and pay — all in one place. Trusted by 10,000+ travellers.</p>
+      <div class="lp-hero-actions">
+        <button class="btn btn-amber" id="hero-explore-btn" type="button">Explore packages →</button>
+        <button class="btn btn-ghost-light" id="hero-agents-btn" type="button">Find a travel agent</button>
+      </div>
+      <div class="lp-trust-row">
+        <span>⭐ 4.9 / 5 rating</span>
+        <span>·</span>
+        <span>10,000+ travellers</span>
+        <span>·</span>
+        <span>9 destinations</span>
+      </div>
+    </div>
+    <div class="lp-hero-cards" aria-hidden="true">
+      <div class="lp-card lp-card-1"><span class="lp-card-stamp">GOA</span><div class="lp-card-detail">4 days · ₹18,000</div></div>
+      <div class="lp-card lp-card-2"><span class="lp-card-stamp">LADAKH</span><div class="lp-card-detail">7 days · ₹45,000</div></div>
+      <div class="lp-card lp-card-3"><span class="lp-card-stamp">BALI</span><div class="lp-card-detail">6 days · ₹52,000</div></div>
+    </div>
+  </section>
+
+  <!-- Stats strip -->
+  <div class="lp-stats">
+    <div class="lp-stat"><strong>9+</strong><span>Destinations</span></div>
+    <div class="lp-stat"><strong>50+</strong><span>Hotel partners</span></div>
+    <div class="lp-stat"><strong>30+</strong><span>Transport options</span></div>
+    <div class="lp-stat"><strong>25+</strong><span>Verified agents</span></div>
+    <div class="lp-stat"><strong>24/7</strong><span>Customer support</span></div>
+  </div>
+
+  <!-- Why Trailmark section -->
+  <section class="lp-section" id="lnav-why">
+    <div class="lp-section-inner">
+      <p class="lp-eyebrow center">WHY CHOOSE US</p>
+      <h2 class="center">Everything a traveller needs</h2>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">✈️</div><h3>Curated Packages</h3><p>Hand-picked itineraries reviewed by expert travel designers who've been there themselves.</p></div>
+        <div class="feature-card"><div class="feature-icon">🏨</div><h3>Hotel Booking</h3><p>Browse and book from 50+ partner hotels — budget to luxury — with instant confirmation.</p></div>
+        <div class="feature-card"><div class="feature-icon">🚌</div><h3>Transport Options</h3><p>Flights, AC buses, taxis and cabs — book all your transport needs from a single screen.</p></div>
+        <div class="feature-card"><div class="feature-icon">🤝</div><h3>Expert Agents</h3><p>25+ verified travel agents ready to build custom itineraries and handle every detail.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔒</div><h3>Secure Payments</h3><p>Pay securely with card, UPI or net banking. Instant receipts and full refund support.</p></div>
+        <div class="feature-card"><div class="feature-icon">📱</div><h3>All in One Place</h3><p>Your bookings, tickets, itinerary and documents — all organised in your My Trips dashboard.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular destinations teaser -->
+  <section class="lp-section lp-section-dark" id="lnav-destinations">
+    <div class="lp-section-inner">
+      <p class="lp-eyebrow center" style="color:var(--amber)">POPULAR RIGHT NOW</p>
+      <h2 class="center" style="color:var(--paper-raised)">Top destinations</h2>
+      <div class="lp-dest-row" id="lp-dest-row"></div>
+      <div class="center" style="margin-top:32px">
+        <button class="btn btn-amber" id="lp-all-dest-btn" type="button">See all packages →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Agents teaser -->
+  <section class="lp-section" id="lnav-agents">
+    <div class="lp-section-inner">
+      <p class="lp-eyebrow center">OUR AGENTS</p>
+      <h2 class="center">Meet our travel experts</h2>
+      <p class="center sub-text">Every Trailmark agent is verified, rated and trained to create unforgettable experiences.</p>
+      <div class="agents-grid" id="lp-agents-grid"></div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="lp-section lp-section-alt">
+    <div class="lp-section-inner">
+      <p class="lp-eyebrow center">HOW IT WORKS</p>
+      <h2 class="center">Book in 4 simple steps</h2>
+      <div class="steps-row">
+        <div class="step-item"><div class="step-circle">01</div><h4>Sign up</h4><p>Create your free account in under 60 seconds.</p></div>
+        <div class="step-arrow">→</div>
+        <div class="step-item"><div class="step-circle">02</div><h4>Explore</h4><p>Browse destinations, hotels and transport packages.</p></div>
+        <div class="step-arrow">→</div>
+        <div class="step-item"><div class="step-circle">03</div><h4>Customise</h4><p>Edit your itinerary, pick your hotel and transport.</p></div>
+        <div class="step-arrow">→</div>
+        <div class="step-item"><div class="step-circle">04</div><h4>Pay &amp; Go</h4><p>Pay securely and get your e-ticket instantly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="lp-section">
+    <div class="lp-section-inner">
+      <p class="lp-eyebrow center">TRAVELLER REVIEWS</p>
+      <h2 class="center">What our travellers say</h2>
+      <div class="reviews-grid">
+        <div class="review-card"><p class="review-text">"Booked Ladakh in 10 minutes. The itinerary was perfectly paced — every detail sorted."</p><div class="review-author"><strong>Siddhesh K.</strong><span>⭐⭐⭐⭐⭐ Ladakh High Passes</span></div></div>
+        <div class="review-card"><p class="review-text">"The hotel recommendations were spot on. Stayed in a gorgeous heritage property in Jaipur."</p><div class="review-author"><strong>Priya M.</strong><span>⭐⭐⭐⭐⭐ Jaipur Heritage Trail</span></div></div>
+        <div class="review-card"><p class="review-text">"Our agent Atharva handled everything — flights, hotel, activities. Completely stress-free."</p><div class="review-author"><strong>Rajan D.</strong><span>⭐⭐⭐⭐⭐ Kerala Backwaters</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section class="lp-section lp-section-dark" id="lnav-about">
+    <div class="lp-section-inner lp-about-layout">
+      <div>
+        <p class="lp-eyebrow" style="color:var(--amber)">OUR STORY</p>
+        <h2 style="color:var(--paper-raised)">Built by travellers,<br>for travellers.</h2>
+        <p style="color:rgba(251,247,234,.7)">Trailmark was founded in 2024 to remove the chaos from trip planning. We connect tourists with expert agents, hotels and transport providers — so you can focus on the experience, not the logistics.</p>
+        <p style="color:rgba(251,247,234,.7)">Every package is curated by specialists. All prices include everything — no hidden fees, ever.</p>
+        <button class="btn btn-amber" id="lp-about-cta" type="button" style="margin-top:12px">Start planning today →</button>
+      </div>
+      <div class="lp-about-facts">
+        <div class="lp-fact"><strong>2024</strong><span>Founded</span></div>
+        <div class="lp-fact"><strong>9</strong><span>Destinations</span></div>
+        <div class="lp-fact"><strong>25+</strong><span>Verified agents</span></div>
+        <div class="lp-fact"><strong>10K+</strong><span>Happy travellers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <section class="lp-cta-banner">
+    <h2>Ready to plan your next adventure?</h2>
+    <p>Join thousands of travellers who use Trailmark to book smarter.</p>
+    <button class="btn btn-amber" id="lp-final-cta" type="button">Create your free account →</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="lp-footer">
+    <div class="lp-footer-inner">
+      <div class="lp-footer-brand"><span class="stamp-mark" style="width:32px;height:32px;font-size:14px">T</span><strong>Trailmark</strong></div>
+      <p class="lp-footer-copy">© 2024 Trailmark Travel Pvt. Ltd. · All rights reserved · No real bookings are made in this prototype.</p>
+    </div>
+  </footer>
+
+</div><!-- /screen-landing -->
+
+
+<!-- =====================================================================
+     SCREEN 2 — SIGN IN / SIGN UP  (separate page)
+===================================================================== -->
+<div id="screen-auth" class="screen" hidden>
+  <div class="auth-page">
+    <div class="auth-page-left">
+      <button class="auth-back-btn" id="auth-back-btn" type="button">← Back to home</button>
+      <div class="auth-brand">
+        <span class="stamp-mark">T</span>
+        <div class="auth-brand-text">
+          <strong>Trailmark</strong>
+          <span>Travel Planning System</span>
+        </div>
+      </div>
+      <div class="auth-copy">
+        <p class="ticket-code">SIGN IN / SIGN UP</p>
+        <h1>Welcome back.<br><em>Let's plan.</em></h1>
+        <p class="auth-lede">Choose your account type and sign in to access your personalised dashboard.</p>
+      </div>
+      <div class="role-picker" role="tablist">
+        <button class="role-tab active" data-role="tourist" type="button">🧳 Tourist</button>
+        <button class="role-tab" data-role="agent" type="button">🤝 Travel Agent</button>
+        <button class="role-tab" data-role="admin" type="button">🛡️ Admin</button>
+      </div>
+      <form id="form-tourist" class="auth-form">
+        <label class="field"><span>Your name</span><input type="text" id="tourist-name" placeholder="e.g. Siddhesh Kawad" required></label>
+        <label class="field"><span>Phone number</span><input type="tel" id="tourist-phone" placeholder="98xxxxxxxx" required></label>
+        <div id="tourist-otp-wrap" class="field" hidden>
+          <span>Verification code <small>(any 4 digits)</small></span>
+          <input type="text" id="tourist-otp" maxlength="4" placeholder="0000" inputmode="numeric">
+        </div>
+        <button type="button" id="tourist-send-otp" class="btn btn-primary">Send OTP</button>
+        <button type="submit" id="tourist-continue" class="btn btn-primary" hidden>Continue as Tourist →</button>
+      </form>
+      <form id="form-staff" class="auth-form" hidden>
+        <label class="field"><span>Staff name</span><input type="text" id="staff-name" placeholder="e.g. Atharva Dherange" required></label>
+        <label class="field"><span>Work email</span><input type="email" id="staff-email" placeholder="you@trailmark.com" required></label>
+        <label class="field"><span>Password</span><input type="password" id="staff-password" placeholder="••••••••" required></label>
+        <button type="submit" class="btn btn-primary">Sign in →</button>
+      </form>
+      <p class="auth-footnote">Prototype — authentication is simulated. No real OTP or credentials are verified.</p>
+    </div>
+    <div class="auth-page-right" aria-hidden="true">
+      <div class="auth-right-content">
+        <div class="passport-stack">
+          <div class="postcard postcard-1"><span class="postcard-stamp">GOA</span><span class="postcard-line"></span><span class="postcard-line short"></span></div>
+          <div class="postcard postcard-2"><span class="postcard-stamp">LADAKH</span><span class="postcard-line"></span><span class="postcard-line short"></span></div>
+          <div class="postcard postcard-3"><span class="postcard-stamp">BALI</span><span class="postcard-line"></span><span class="postcard-line short"></span></div>
+        </div>
+        <p class="ticket-code" style="color:var(--amber);margin-top:32px">TRAILMARK · EST. 2024</p>
+        <p style="color:rgba(251,247,234,.55);font-size:14px;max-width:26ch;text-align:center">The smarter way to plan, book and manage every journey.</p>
+      </div>
+    </div>
+  </div>
+</div><!-- /screen-auth -->
+
+
+<!-- =====================================================================
+     SCREEN 3 — APP SHELL  (shown after login)
+===================================================================== -->
+<div id="screen-app" class="screen" hidden>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span class="stamp-mark small">T</span>
+        <strong class="brand-word">Trailmark</strong>
+      </div>
+      <nav class="topnav" id="topnav"></nav>
+      <div class="topbar-right">
+        <button class="theme-toggle" id="theme-toggle-app" type="button" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+        <div class="user-chip">
+          <span id="current-user-name">—</span>
+          <span id="current-user-role" class="user-role-badge">—</span>
+        </div>
+        <button id="logout-btn" class="btn btn-ghost btn-small" type="button">Log out</button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav" hidden></div>
+
+  <main class="main-area">
+
+    <!-- TOURIST: DASHBOARD -->
+    <section id="view-dashboard" class="view" hidden>
+      <div class="view-page-head">
+        <h2 id="dash-welcome">Welcome back!</h2>
+        <p class="view-sub">Here's an overview of your upcoming adventures.</p>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat-card"><span class="label">Upcoming Trips</span><strong id="dash-upcoming-count">0</strong></div>
+        <div class="dash-stat-card"><span class="label">Total Spent</span><strong id="dash-spent">₹0</strong></div>
+        <div class="dash-stat-card"><span class="label">Saved to Wishlist</span><strong id="dash-wishlist-count">0</strong></div>
+      </div>
+      <div style="margin-top:32px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px">
+          <h3 style="margin:0;font-size:20px">Recommended for you</h3>
+          <button class="btn btn-ghost btn-small" id="dash-go-explore" type="button">Explore all →</button>
+        </div>
+        <div class="destination-grid" id="dash-recommended-grid"></div>
+      </div>
+      <div style="margin-top:40px">
+        <h3 style="font-size:20px;margin-bottom:16px">Recent Activity</h3>
+        <div id="dash-activity-feed" class="dash-activity-feed"></div>
+      </div>
+    </section>
+
+    <!-- TOURIST: EXPLORE -->
+    <section id="view-explore" class="view" hidden>
+      <div class="boarding-pass">
+        <div class="bp-main">
+          <p class="ticket-code">SEARCH DESTINATIONS</p>
+          <h2>Where to next?</h2>
+          <div class="search-row">
+            <label class="field"><span>Destination or keyword</span><input type="text" id="search-destination" placeholder='Try "Goa" or "mountains"'></label>
+            <label class="field"><span>Duration</span>
+              <select id="search-duration"><option value="">Any</option><option value="short">2–3 days</option><option value="mid">4–5 days</option><option value="long">6+ days</option></select></label>
+            <label class="field"><span>Max budget: ₹<output id="budget-output">50000</output></span><input type="range" id="search-budget" min="5000" max="80000" step="1000" value="50000"></label>
+          </div>
+          <div class="interest-chips" id="interest-chips">
+            <button class="chip" data-interest="beach" type="button">🏖 Beach</button>
+            <button class="chip" data-interest="mountains" type="button">🏔 Mountains</button>
+            <button class="chip" data-interest="heritage" type="button">🏯 Heritage</button>
+            <button class="chip" data-interest="wildlife" type="button">🐘 Wildlife</button>
+            <button class="chip" data-interest="adventure" type="button">🧗 Adventure</button>
+            <button class="chip" data-interest="spiritual" type="button">🕉 Spiritual</button>
+            
+            <div style="margin-left:auto;display:flex;gap:12px;align-items:center">
+              <select id="search-sort" style="padding:6px 12px;border-radius:20px;border:1px solid var(--border);background:var(--paper);color:var(--text);font-size:13px;cursor:pointer">
+                <option value="none">Sort by: Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="duration-asc">Duration: Short to Long</option>
+                <option value="duration-desc">Duration: Long to Short</option>
+                <option value="name-asc">Name: A–Z</option>
+              </select>
+              <button class="btn btn-ghost btn-xs" id="clear-filters-btn" type="button" style="padding:6px 12px;border-radius:20px">Clear all</button>
+            </div>
+          </div>
+        </div>
+        <div class="bp-stub"><span class="stub-label">Results</span><strong id="results-count">0</strong><span class="stub-label">found</span></div>
+      </div>
+      <div id="destination-grid" class="destination-grid"></div>
+    </section>
+
+    <!-- TOURIST: PACKAGE DETAIL -->
+    <section id="view-package" class="view" hidden>
+      <button class="back-link" id="back-to-explore" type="button">← Back to search</button>
+      <div id="package-detail" class="package-detail"></div>
+    </section>
+
+    <!-- TOURIST: HOTELS -->
+    <section id="view-hotels" class="view" hidden>
+      <div class="view-page-head">
+        <p class="ticket-code">ACCOMMODATION</p>
+        <h2>Browse hotels</h2>
+        <p class="view-sub">Filter by destination, star rating and budget to find your perfect stay.</p>
+      </div>
+      <div class="filter-bar">
+        <label class="filter-field"><span>Destination</span><input type="text" id="hotel-dest" placeholder="e.g. Goa, Bali…"></label>
+        <label class="filter-field"><span>Check-in</span><input type="date" id="hotel-checkin"></label>
+        <label class="filter-field"><span>Check-out</span><input type="date" id="hotel-checkout"></label>
+        <label class="filter-field"><span>Stars</span>
+          <select id="hotel-stars"><option value="">Any stars</option><option value="5">⭐⭐⭐⭐⭐ 5 Star</option><option value="4">⭐⭐⭐⭐ 4 Star</option><option value="3">⭐⭐⭐ 3 Star</option><option value="2">⭐⭐ Budget</option></select></label>
+        <label class="filter-field"><span>Max/night: ₹<output id="hotel-budget-out">12000</output></span><input type="range" id="hotel-budget" min="500" max="20000" step="500" value="12000"></label>
+        <button class="btn btn-primary btn-small" id="hotel-search-btn" type="button">Search hotels</button>
+      </div>
+      <div id="hotels-grid" class="hotels-grid"></div>
+    </section>
+
+    <!-- TOURIST: TRANSPORT -->
+    <section id="view-transport" class="view" hidden>
+      <div class="view-page-head">
+        <p class="ticket-code">TRANSPORT</p>
+        <h2>Book transport</h2>
+        <p class="view-sub">Flights, AC buses, cabs and private taxis — all in one place.</p>
+      </div>
+      <div class="transport-tabs">
+        <button class="t-tab active" data-ttab="flights" type="button">✈️ Flights</button>
+        <button class="t-tab" data-ttab="buses" type="button">🚌 Buses</button>
+        <button class="t-tab" data-ttab="cabs" type="button">🚗 Cabs / Taxis</button>
+      </div>
+      <div class="filter-bar" id="transport-search-bar">
+        <label class="filter-field"><span>From</span><input type="text" id="tr-from" placeholder="e.g. Mumbai"></label>
+        <label class="filter-field"><span>To</span><input type="text" id="tr-to" placeholder="e.g. Goa"></label>
+        <label class="filter-field"><span>Date</span><input type="date" id="tr-date"></label>
+        <label class="filter-field"><span>Passengers</span><select id="tr-pax"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+        <button class="btn btn-primary btn-small" id="transport-search-btn" type="button">Search</button>
+      </div>
+      <div id="transport-results" class="transport-grid"></div>
+    </section>
+
+    <!-- TOURIST: MY TRIPS -->
+    <section id="view-trips" class="view" hidden>
+      <div class="view-page-head">
+        <p class="ticket-code">MY TRIPS</p>
+        <h2>Your bookings</h2>
+        <p class="view-sub">All your confirmed and pending bookings in one place.</p>
+      </div>
+      <div class="trips-tabs">
+        <button class="tr-tab active" data-trtab="all" type="button">All</button>
+        <button class="tr-tab" data-trtab="packages" type="button">Packages</button>
+        <button class="tr-tab" data-trtab="hotels" type="button">Hotels</button>
+        <button class="tr-tab" data-trtab="transport" type="button">Transport</button>
+      </div>
+      <div id="trips-list" class="trips-list"></div>
+    </section>
+
+    <!-- TOURIST: PAYMENT -->
+    <section id="view-payment" class="view" hidden>
+      <button class="back-link" id="back-from-payment" type="button">← Back</button>
+      <div id="payment-container" class="payment-layout"></div>
+    </section>
+
+    <!-- TOURIST: TRAVEL AGENTS -->
+    <section id="view-agents" class="view" hidden>
+      <div class="view-page-head">
+        <p class="ticket-code">FIND AN EXPERT</p>
+        <h2>Our travel agents</h2>
+        <p class="view-sub">All agents are verified and rated by real travellers. Book a consultation or request a custom package.</p>
+      </div>
+      <div id="agents-list" class="agents-grid-app"></div>
+    </section>
+
+    <!-- AGENT: MANAGE PACKAGES -->
+    <section id="view-agent-packages" class="view" hidden>
+      <p class="ticket-code">TRAVEL AGENT PORTAL</p>
+      <div class="view-header-row"><h2>Manage packages</h2><button id="new-package-btn" class="btn btn-primary" type="button">+ New package</button></div>
+      <div id="agent-package-form-wrap" hidden></div>
+      <div id="agent-package-table" class="agent-table"></div>
+    </section>
+
+    <!-- AGENT: MANAGE HOTELS -->
+    <section id="view-agent-hotels" class="view" hidden>
+      <p class="ticket-code">TRAVEL AGENT PORTAL</p>
+      <div class="view-header-row"><h2>Manage hotels</h2><button id="new-hotel-btn" class="btn btn-primary" type="button">+ Add hotel</button></div>
+      <div id="agent-hotel-form-wrap" hidden></div>
+      <div id="agent-hotel-table" class="agent-table"></div>
+    </section>
+
+    <!-- AGENT: MANAGE TRANSPORT -->
+    <section id="view-agent-transport" class="view" hidden>
+      <p class="ticket-code">TRAVEL AGENT PORTAL</p>
+      <div class="view-header-row"><h2>Manage transport</h2><button id="new-transport-btn" class="btn btn-primary" type="button">+ Add route</button></div>
+      <div id="agent-transport-form-wrap" hidden></div>
+      <div class="transport-tabs" id="agent-tr-tabs">
+        <button class="t-tab active" data-agtr="flights" type="button">✈️ Flights</button>
+        <button class="t-tab" data-agtr="buses" type="button">🚌 Buses</button>
+        <button class="t-tab" data-agtr="cabs" type="button">🚗 Cabs</button>
+      </div>
+      <div id="agent-transport-table" class="agent-table"></div>
+    </section>
+
+    <!-- AGENT: MANAGE ITINERARIES -->
+    <section id="view-agent-itineraries" class="view" hidden>
+      <p class="ticket-code">TRAVEL AGENT PORTAL</p>
+      <h2>Manage itineraries</h2>
+      <p class="view-sub" style="margin-bottom:20px">Select a package to edit its day-by-day itinerary.</p>
+      <div id="agent-itin-picker" class="agent-table"></div>
+      <div id="agent-itin-editor" hidden></div>
+    </section>
+
+    <!-- AGENT: BOOKING REQUESTS -->
+    <section id="view-agent-bookings" class="view" hidden>
+      <p class="ticket-code">TRAVEL AGENT PORTAL</p>
+      <div class="view-header-row"><h2>Booking requests</h2>
+        <div class="trips-tabs" style="margin:0;border:none;padding:0">
+          <button class="tr-tab active" data-abtab="all" type="button">All</button>
+          <button class="tr-tab" data-abtab="package" type="button">Packages</button>
+          <button class="tr-tab" data-abtab="hotel" type="button">Hotels</button>
+          <button class="tr-tab" data-abtab="transport" type="button">Transport</button>
+        </div>
+      </div>
+      <div id="agent-bookings-list" class="trips-list" style="margin-top:16px"></div>
+    </section>
+
+    <!-- ADMIN: MANAGE AGENTS -->
+    <section id="view-admin-agents" class="view" hidden>
+      <p class="ticket-code">ADMIN PANEL</p>
+      <h2>Travel agents</h2>
+      <div id="admin-agents-table" class="agent-table"></div>
+    </section>
+
+    <!-- ADMIN: USERS (Tourists) -->
+    <section id="view-admin-users" class="view" hidden>
+      <p class="ticket-code">ADMIN PANEL</p>
+      <h2>Manage tourists</h2>
+      <div id="admin-users-table" class="agent-table"></div>
+    </section>
+
+    <!-- ADMIN: REVIEWS -->
+    <section id="view-admin-reviews" class="view" hidden>
+      <p class="ticket-code">ADMIN PANEL</p>
+      <h2>Traveller reviews</h2>
+      <p class="view-sub" style="margin-bottom:20px">Approve or dismiss reviews submitted by tourists.</p>
+      <div id="admin-reviews-list" class="trips-list"></div>
+    </section>
+
+    <!-- ADMIN: REPORTS -->
+    <section id="view-admin-reports" class="view" hidden>
+      <p class="ticket-code">ADMIN PANEL</p>
+      <h2>Reports &amp; Analytics</h2>
+      <div id="report-stats" class="report-stats"></div>
+      <div class="report-charts-row">
+        <div class="report-chart-card"><h3>Bookings by type</h3><div id="report-chart-type" class="report-chart"></div></div>
+        <div class="report-chart-card"><h3>Bookings by destination</h3><div id="report-chart" class="report-chart"></div></div>
+        <div class="report-chart-card"><h3>Revenue by month</h3><div id="revenue-chart" class="report-chart"></div></div>
+        <div class="report-chart-card"><h3>Top agents by trips</h3><div id="report-chart-agents" class="report-chart"></div></div>
+      </div>
+      <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border);display:flex;align-items:center;gap:14px">
+        <button class="btn btn-danger btn-small" id="reset-demo-btn" type="button">🔄 Reset Demo Data</button>
+        <span style="font-size:12px;color:var(--text-muted)">Clears all saved changes and restores default bookings, users and reviews.</span>
+      </div>
+    </section>
+
+    <!-- ADMIN: PACKAGES -->
+    <section id="view-admin-packages" class="view" hidden>
+      <p class="ticket-code">ADMIN PANEL</p>
+      <h2>All packages</h2>
+      <div id="admin-packages-table" class="agent-table"></div>
+    </section>
+
+    <!-- ABOUT (all roles) -->
+    <section id="view-about" class="view" hidden>
+      <div class="view-page-head"><p class="ticket-code">OUR STORY</p><h2>About Trailmark</h2></div>
+      <div class="about-layout">
+        <div class="about-text">
+          <p>Trailmark was built on a simple idea: planning a trip should be exciting, not exhausting. We connect tourists, hotels, transport providers and expert travel agents on one seamless platform.</p>
+          <p>Every package is curated by specialists who have personally visited each destination. Itineraries balance sightseeing with rest — because the best trips leave room for surprise.</p>
+          <p>All prices are per person, all-inclusive, with no hidden fees. Ever.</p>
+          <h3>Our team</h3>
+          <div class="team-grid">
+            <div class="team-card"><strong>Atharva D.</strong><span>Lead Travel Designer</span></div>
+            <div class="team-card"><strong>Dhananjay B.</strong><span>Destinations Curator</span></div>
+            <div class="team-card"><strong>Siddhesh K.</strong><span>Product &amp; Technology</span></div>
+            <div class="team-card"><strong>Parth K.</strong><span>Customer Experience</span></div>
+          </div>
+        </div>
+        <div class="about-stamps" aria-hidden="true">
+          <div class="about-postcard"><span class="postcard-stamp">EST. 2024</span><span class="postcard-line"></span><span class="postcard-line short"></span></div>
+          <div class="about-fact"><strong>9</strong><span>Destinations</span></div>
+          <div class="about-fact"><strong>50+</strong><span>Hotel partners</span></div>
+          <div class="about-fact"><strong>∞</strong><span>Memories</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div><!-- /screen-app -->
+
+<div id="modal-overlay" class="modal-overlay" hidden></div>
+<div id="toast" class="toast" hidden></div>
+
+<!-- Trailmark AI Widget -->
+<div id="ai-widget-container" class="ai-widget-container">
+  <!-- Chat Window -->
+  <div id="ai-chat-window" class="ai-chat-window" hidden>
+    <div class="ai-chat-header">
+      <div class="ai-header-title">
+        <span class="ai-robot-icon">✨</span>
+        <div>
+          <strong>Trailmark AI</strong>
+          <span class="ai-status">Online</span>
+        </div>
+      </div>
+      <button class="ai-close-btn" id="ai-close-btn" aria-label="Close chat">×</button>
+    </div>
+    <div class="ai-chat-messages" id="ai-chat-messages">
+      <div class="ai-message ai-bot">
+        <div class="ai-bubble">Hi there! I'm your Trailmark AI travel expert. Where would you like to go, or what kind of trip are you looking for?</div>
+      </div>
+    </div>
+    <form class="ai-chat-input-area" id="ai-chat-form">
+      <input type="text" id="ai-chat-input" placeholder="Type a message..." autocomplete="off">
+      <button type="submit" class="ai-send-btn" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </form>
+  </div>
+  
+  <!-- FAB Button -->
+  <button id="ai-fab" class="ai-fab" aria-label="Open AI Assistant">
+    <span class="ai-fab-icon">✨</span>
+  </button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
